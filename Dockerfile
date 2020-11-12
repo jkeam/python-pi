@@ -3,6 +3,7 @@ FROM registry.access.redhat.com/ubi8/ubi
 USER 0
 RUN yum install -y python3; yum clean all
 
+ENV PYTHONUNBUFFERED=1
 ENV APP_HOME /app
 WORKDIR $APP_HOME
 COPY . ./
